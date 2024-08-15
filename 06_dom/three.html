@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> learn code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="lang">
+        <li>java</li>
+    </ul>
+    
+</body>
+<script>
+    const add = (langname) => {
+        const li = document.createElement('li')
+        li.innerHTML = `${langname}`
+        document.querySelector('.lang').appendChild(li)
+    }
+    add("javascript")
+    add("python")
+
+    const optiAdd = (langname) => {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.lang').appendChild(li)
+
+
+    }
+
+    optiAdd("golang")
+
+// edit
+const seclang = document.querySelector("li:nth-child(2)")
+// seclang.innerHTML = "mojo"
+
+// const seclang = document.querySelector("li:nth-child(2)");
+// const textNode = document.createTextNode("mojo");
+
+// seclang.textContent = ""; // Clear any existing content
+// seclang.appendChild(textNode);
+
+const newli = document.createElement('li')
+newli.textContent = "mojo"
+seclang.replaceWith(newli)
+
+// edit
+const firstlang = document.querySelector('li:first-child')
+firstlang.outerHTML = '<li>typescript</li>'
+</script>
+</html>
