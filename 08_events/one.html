@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(45, 39, 39); color: white;">
+
+    <!-- Heading -->
+    <h2>Amazing Images</h2>
+
+    <!-- Div with images -->
+    <div>
+        <ul id="images">
+            <!-- List items with images -->
+            <li><img src="https://cdn.pixabay.com/photo/2023/09/04/17/48/flamingos-8233303_1280.jpg" id="pic1" alt="Amazing Image 1" width="250px" height="250px"></li>
+            <li><img src="https://cdn.pixabay.com/photo/2023/03/19/05/31/flower-7861942_1280.jpg" id="pic2" alt="Amazing Image 2" width="250px" height="250px"></li>
+            <li><img src="https://cdn.pixabay.com/photo/2024/08/08/17/13/salt-8955103_1280.jpg" id="pic3" alt="Amazing Image 3" width="250px" height="250px"></li>
+            <li><img src="https://cdn.pixabay.com/photo/2023/06/07/12/47/bird-8047149_1280.jpg" id="pic4" alt="Amazing Image 4" width="250px" height="250px"></li>
+            <li><img src="https://cdn.pixabay.com/photo/2024/08/01/08/17/dahlia-8936439_1280.jpg" id="pic5" alt="Amazing Image 5" width="250px" height="250px"></li>
+
+            <!-- Last list item with an anchor tag -->
+            <li><a style="color: aliceblue;" href="http://google.com" id="google">google</a></li>
+        </ul>
+    </div>
+    <script>
+    //    document.getElementById('pic4').onclick = function() {
+    //         alert("pic4 checked")
+    //     }
+
+    // document.getElementById('images').addEventListener('click', (e)=>{
+    //    console.log("clicked inside ul");
+       
+    // }, false)
+    // document.getElementById('google').addEventListener('click', (e)=>{
+    //    console.log("google clicked");
+    //    e.stopPropagation()  
+    // }, false)
+    // document.getElementById('google').addEventListener('click', (e)=>{
+    //    e.defaultPrevented()
+    //    e.stopPropagation()
+    //    console.log("google clicked");
+    // }, false)
+
+    // type timestamp defaultprevented
+    // target toElement srcElement currentTarget
+    // clentX clienty offset screenx screeny
+    // altkey ctrlkey shiftkey keycode
+
+    document.querySelector('#images').addEventListener('click', (e)=>{
+        console.log(e.target.parentNode);
+        if(e.target.tagName === IMG){
+            let removeit = e.target.parentNode
+            // remove.remove()
+            removeit.parentNode.removeChild(removeit)
+        }
+        let removeit = e.target.parentNode
+        // remove.remove()
+        removeit.parentNode.removeChild(removeit)
+        
+    })
+
+    </script>
+</body>
+</html>
